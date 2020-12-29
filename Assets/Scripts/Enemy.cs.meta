@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: d09ead73e8599434eacf55b53241c980
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - enemyDeathFX: {fileID: 1277027630481580497, guid: 1e89a53a5f8e2e346ae86e1bfae31b40,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
