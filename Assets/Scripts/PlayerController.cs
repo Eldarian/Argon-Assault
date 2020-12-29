@@ -6,23 +6,31 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerController : MonoBehaviour
 {
-    [Tooltip("In m/s")] [SerializeField] float xSpeed = 30f, ySpeed = 30f;
-    [SerializeField] float xRange = 12.5f;
-    [SerializeField] float yRange = 8;
+    [Header("General")]
+    [Tooltip("In m/s")] [SerializeField] float controlSpeed = 30f;
+    [Tooltip("In meters")] [SerializeField] float xRange = 12.5f;
+    [Tooltip("In meters")] [SerializeField] float yRange = 8;
     float xThrow, yThrow;
 
+    [Header("Screen Position Parameters")]
     [SerializeField] float positionPitchFactor = -3f;
-    [SerializeField] float controlPitchFactor = -20f;
     [SerializeField] float positionYawFactor = 2f;
+
+    [Header("Control Parameters")]
+    [SerializeField] float controlPitchFactor = -20f;
     [SerializeField] float controlYawFactor = 10f;
     [SerializeField] float controlRollFactor = 25;
 
+    bool isControlEnabled = true;
 
     // Update is called once per frame
     void Update()
     {
-        ProcessTransition();
-        ProcessRotation();
+        if(isControlEnabled)
+        {
+            ProcessTransition();
+            ProcessRotation();
+        }
     }
 
     private void ProcessRotation()
@@ -46,8 +54,8 @@ public class PlayerController : MonoBehaviour
         xThrow = CrossPlatformInputManager.GetAxis("Horizontal");
         yThrow = CrossPlatformInputManager.GetAxis("Vertical");
 
-        float xOffset = xThrow * Time.deltaTime * xSpeed;
-        float yOffset = yThrow * Time.deltaTime * ySpeed;
+        float xOffset = xThrow * Time.deltaTime * controlSpeed;
+        float yOffset = yThrow * Time.deltaTime * controlSpeed;
 
         float rawXPos = transform.localPosition.x + xOffset;
         float rawYPos = transform.localPosition.y + yOffset;
@@ -57,4 +65,10 @@ public class PlayerController : MonoBehaviour
 
         transform.localPosition = new Vector3(xPos, yPos, transform.localPosition.z);
     }
+
+    public void OnPlayerDeath() //called by string reference
+    {
+        isControlEnabled = false;
+    }
+   
 }
