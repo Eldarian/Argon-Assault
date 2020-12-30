@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1277027630481580510}
   - component: {fileID: 1277027630481580509}
   - component: {fileID: 8952256319294967217}
+  - component: {fileID: -5433004381338460848}
   m_Layer: 0
   m_Name: Enemy Death FX
   m_TagString: Untagged
@@ -5038,3 +5039,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04c01a3fb7117e2488c7d4c47be3fa7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-5433004381338460848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277027630481580497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 054c06c890aeb4544b10994f9db835fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SelfDestructionTime: 5
