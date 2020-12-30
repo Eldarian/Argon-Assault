@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         AddNonTriggerBoxCollider();
-        scoreBoard = GameObject.Find("Score Text").GetComponent<ScoreBoard>();
+        scoreBoard = FindObjectOfType<ScoreBoard>();
     }
 
     private void AddNonTriggerBoxCollider()

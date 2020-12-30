@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float controlYawFactor = 10f;
     [SerializeField] float controlRollFactor = 25;
 
+    [SerializeField] GameObject[] gunsArray;
+
     bool isControlEnabled = true;
 
     // Update is called once per frame
@@ -30,6 +32,34 @@ public class PlayerController : MonoBehaviour
         {
             ProcessTransition();
             ProcessRotation();
+            ProcessShooting();
+        }
+    }
+
+    private void ProcessShooting()
+    {
+        if(CrossPlatformInputManager.GetButton("Fire1"))
+        {
+            ActivateGuns();
+        } else
+        {
+            DeactivateGuns();
+        }
+    }
+
+    private void DeactivateGuns()
+    {
+        foreach (GameObject gun in gunsArray)
+        {
+            gun.SetActive(false);
+        }
+    }
+
+    private void ActivateGuns()
+    {
+        foreach (GameObject gun in gunsArray)
+        {
+            gun.SetActive(true);
         }
     }
 

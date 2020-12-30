@@ -5189,6 +5189,9 @@ MonoBehaviour:
   controlPitchFactor: -20
   controlYawFactor: 10
   controlRollFactor: 25
+  gunsArray:
+  - {fileID: 745069618}
+  - {fileID: 7330546422401750977}
 --- !u!54 &2033508204
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5230,6 +5233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff911e498fea76643a00891f66d3a23e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restartDelay: 1
   explosionFX: {fileID: 1911909623}
 --- !u!1 &4090184184274850909
 GameObject:
@@ -5363,6 +5367,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e29f5c502c0d47a40bba7a74361ba89d, type: 3}
+--- !u!1 &7330546422401750977 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7330546421755706435, guid: e29f5c502c0d47a40bba7a74361ba89d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1787177858}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &159269349017189313
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6847,6 +6857,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e29f5c502c0d47a40bba7a74361ba89d, type: 3}
+--- !u!1 &745069618 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7330546421755706435, guid: e29f5c502c0d47a40bba7a74361ba89d,
+    type: 3}
+  m_PrefabInstance: {fileID: 7330546421284380785}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7474428237617731577
 PrefabInstance:
   m_ObjectHideFlags: 0

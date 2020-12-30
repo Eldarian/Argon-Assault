@@ -21,8 +21,8 @@ public class ScoreBoard : MonoBehaviour
         scoreText.text = score.ToString();
     }
 
-    public void ScoreHit(int scorePerHit)
+    public void ScoreHit(int scoreIncrease)
     {
-        score = score + scorePerHit;
+        score = score + scoreIncrease;
     }
 }
