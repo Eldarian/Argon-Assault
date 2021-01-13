@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Splash.unity
     guid: 2375430f43a87aa4a94ab323a089db0c
   - enabled: 1
-    path: Assets/Scenes/Sandbox.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/Scenes/Crater.unity
+    guid: 3246ca60107ed1048b71450d7db24f00
   m_configObjects: {}
